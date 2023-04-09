@@ -37,20 +37,33 @@ const Header = () => {
         </div>
       </section>
       {/* header section banner code complete*/}
-      <section className="font-serif my-4">
+
+      <section className="font-serif my-8">
         <h1 className="text-3xl font-bold text-center">Job Category List</h1>
         <p className="my-2 text-center font-light">
           Explore thousands of job opportunities with all the information you
           need. Its your future
         </p>
         <div className="flex flex-col items-center md:flex-row gap-3 my-8 px-2 md:px-14 justify-between">
-        {categoryData.map((data) => (
-          <JobCategoryData data={data} key={data.id}></JobCategoryData>
-        ))}
+          {categoryData.map((data) => (
+            <JobCategoryData data={data} key={data.id}></JobCategoryData>
+          ))}
         </div>
       </section>
+      {/* header section job category code complete */}
 
-      
+      <section className="font-serif my-8">
+        <h1 className="text-3xl font-bold text-center">Featured Jobs</h1>
+        <p className="my-2 text-center font-light">
+          Explore thousands of job opportunities with all the information you
+          need.
+        </p>
+        <div>
+            {
+                
+            }
+        </div>
+      </section>
     </div>
   );
 };
