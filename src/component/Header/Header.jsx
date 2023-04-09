@@ -1,9 +1,24 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import JobCategoryData from "../JobCategoryData/JobCategoryData";
+import SingleJob from "../SingleJob/SingleJob";
 
 const Header = () => {
   const categoryData = useLoaderData();
+  const [jobData, setJobData] = useState([]);
+  const [showAll, setShowAll] = useState(false);
+  useEffect(()=>{
+
+    const loadData = async() =>{
+        const res = await fetch('job.json');
+        const data = await res.json();
+        setJobData(data)
+        // console.log(data);
+    }
+    loadData();
+    
+  },[])
+  
 
   return (
     <div className="p-6">
@@ -58,10 +73,15 @@ const Header = () => {
           Explore thousands of job opportunities with all the information you
           need.
         </p>
-        <div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {
-                
+                jobData.slice(0,4).map(singleJob=> <SingleJob singleJob={singleJob} 
+                key={singleJob.id}
+                ></SingleJob>)
             }
+        </div>
+        <div className="flex justify-center my-6">
+        <button className="btn-common">See all jobs</button>
         </div>
       </section>
     </div>
