@@ -1,0 +1,26 @@
+[
+    {
+      "id": "643302a2748d98430cbbb1f7",
+      "picture": "../src/assets/Icons/accounts 1.png",
+      "title": "Software Engineer",
+      "vacancy": "200 jobs Available"
+    },
+    {
+      "id": "643302a2d8213aec31f3e6a3",
+      "picture": "../src/assets/Icons/business 1.png",
+      "title": "Web Developer",
+      "vacancy": "300+ jobs available"
+    },
+    {
+      "id": "643302a2f870eb4e41b56ae2",
+      "picture": "../src/assets/Icons/chip 1.png",
+      "title": "Graphics Designer",
+      "vacancy": "250+ jobs available"
+    },
+    {
+      "id": "643302a2cd8d4f403d776234",
+      "picture": "../src/assets/Icons/social-media 1.png",
+      "title": "Junior Developer",
+      "vacancy": "150+ jobs available"
+    }
+  ]
