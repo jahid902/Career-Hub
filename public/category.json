@@ -1,25 +1,25 @@
 [
     {
       "id": "643302a2748d98430cbbb1f7",
-      "CategoryLogo": "../src/assets/Icons/accounts 1.png",
+      "CategoryLogo": "./Icons/accounts 1.png",
       "CategoryName": "Software Engineer",
       "JobsAvailable": "200 jobs Available"
     },
     {
       "id": "643302a2d8213aec31f3e6a3",
-      "CategoryLogo": "../src/assets/Icons/business 1.png",
+      "CategoryLogo": "./Icons/business 1.png",
       "CategoryName": "Web Developer",
       "JobsAvailable": "300+ jobs available"
     },
     {
       "id": "643302a2f870eb4e41b56ae2",
-      "CategoryLogo": "../src/assets/Icons/chip 1.png",
+      "CategoryLogo": "./Icons/chip 1.png",
       "CategoryName": "Graphics Designer",
       "JobsAvailable": "250+ jobs available"
     },
     {
       "id": "643302a2cd8d4f403d776234",
-      "CategoryLogo": "../src/assets/Icons/social-media 1.png",
+      "CategoryLogo": "./Icons/social-media 1.png",
       "CategoryName": "Junior Developer",
       "JobsAvailable": "150+ jobs available"
     }
