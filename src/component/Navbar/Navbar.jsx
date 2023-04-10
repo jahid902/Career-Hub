@@ -4,8 +4,7 @@ import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <div className="flex justify-between sm:px-2 md:px-6 sm:pt-2 md:pt-4
-    bg-gradient-to-r from-purple-300 via-fuchsia-300 to-purple-300 pb-2">
+    <div className="navbar-container">
       <div className="flex items-center tracking-wider font-bold">
         <h1 className="text-3xl">
           Fit

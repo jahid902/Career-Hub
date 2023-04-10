@@ -7,6 +7,7 @@ const JobDetails = () => {
   const jobsData = useLoaderData();
   const [allJob, setAllJob] = useState({});
   const { id } = useParams();
+  const [apply, setApply] = useState(false)
 
   const handleAlert = () =>{
 
@@ -15,6 +16,7 @@ const JobDetails = () => {
       "Applied for the job",
       'success'
     )
+    setApply(true)
   }
 
 
@@ -74,8 +76,9 @@ const JobDetails = () => {
             <MapPinIcon className="h-6 w-6 text-cyan-400" />
             <p>Address: {allJob.location}</p>
           </div>
-          <button onClick={()=> handleAlert()} className="btn-common2 mx-auto">Apply now </button>
-
+          {!apply &&
+            <button onClick={()=> handleAlert()} className="btn-common2 mx-auto">Apply now </button>
+          }
         </div>
       </div>
     </div>
