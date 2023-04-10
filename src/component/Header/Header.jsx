@@ -7,18 +7,20 @@ const Header = () => {
   const categoryData = useLoaderData();
   const [jobData, setJobData] = useState([]);
   const [showAll, setShowAll] = useState(false);
-  useEffect(()=>{
 
-    const loadData = async() =>{
-        const res = await fetch('job.json');
-        const data = await res.json();
-        setJobData(data)
-        // console.log(data);
-    }
+  const handleShowAll = () => {
+    setShowAll(true);
+  };
+
+  useEffect(() => {
+    const loadData = async () => {
+      const res = await fetch("job.json");
+      const data = await res.json();
+      setJobData(data);
+      // console.log(data);
+    };
     loadData();
-    
-  },[])
-  
+  }, []);
 
   return (
     <div className="p-6">
@@ -73,16 +75,18 @@ const Header = () => {
           Explore thousands of job opportunities with all the information you
           need.
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {
-                jobData.slice(0,4).map(singleJob=> <SingleJob singleJob={singleJob} 
-                key={singleJob.id}
-                ></SingleJob>)
-            }
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-2 md:my-8">
+          {jobData.slice(0, showAll ? 6 : 4).map((singleJob) => (
+            <SingleJob singleJob={singleJob} key={singleJob.id}></SingleJob>
+          ))}
         </div>
-        <div className="flex justify-center my-6">
-        <button className="btn-common">See all jobs</button>
-        </div>
+        {!showAll &&
+          <div className="flex justify-center my-6">
+            <button onClick={() => handleShowAll()} className="btn-common">
+              See all jobs
+            </button>
+          </div>
+        }
       </section>
     </div>
   );
