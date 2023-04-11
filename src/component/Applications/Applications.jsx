@@ -29,12 +29,12 @@ const Applications = () => {
         </h1>
         <img
           className="w-28 h-48 md:w-1/3 absolute inset-y-0 left-0 "
-          src="https://img.freepik.com/free-vector/blue-line-gradient-background_361591-1373.jpg?size=626&ext=jpg&uid=R98934714&ga=GA1.2.1789606317.1681061526&semt=sph"
+          src="../../../public/All Images/Vector-1.png"
           alt=""
         />
         <img
           className="w-28 h-48 md:w-1/3 absolute inset-y-0 right-0 "
-          src="https://img.freepik.com/free-vector/blue-line-gradient-background_361591-1373.jpg?size=626&ext=jpg&uid=R98934714&ga=GA1.2.1789606317.1681061526&semt=sph"
+          src="../../../public/All Images/Vector.png"
           alt=""
         />
       </div>
