@@ -21,4 +21,16 @@ const addToDb = id => {
     localStorage.setItem('job-applications', JSON.stringify(applications))
 }
 
-export {addToDb}
+const getStoredApplications = () => {
+
+    let applications ={};
+
+    const storedApplications = localStorage.getItem('job-applications');
+    if(storedApplications){
+        applications = JSON.parse(storedApplications);
+    }
+    return applications;
+
+}
+
+export {addToDb, getStoredApplications}
