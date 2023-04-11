@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
 import { MapPinIcon, CurrencyDollarIcon, CalendarDaysIcon, PhoneIcon, EnvelopeIcon } from "@heroicons/react/24/solid";
 import Swal from "sweetalert2";
+import { addToDb } from "../../utils/fakeDB";
 
 const JobDetails = () => {
   const jobsData = useLoaderData();
@@ -9,7 +10,7 @@ const JobDetails = () => {
   const { id } = useParams();
   const [apply, setApply] = useState(false)
 
-  const handleAlert = () =>{
+  const handleAlert = (id) =>{
 
     Swal.fire(
       "Task complete",
@@ -17,6 +18,7 @@ const JobDetails = () => {
       'success'
     )
     setApply(true)
+    addToDb(id);
   }
 
 
@@ -81,7 +83,7 @@ const JobDetails = () => {
             <p>Address: {allJob.location}</p>
           </div>
           {!apply &&
-            <button onClick={()=> handleAlert()} className="btn-common2 mx-auto">Apply now </button>
+            <button onClick={()=> handleAlert(allJob.id)} className="btn-common2 mx-auto">Apply now </button>
           }
         </div>
       </div>

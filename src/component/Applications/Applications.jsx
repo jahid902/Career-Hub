@@ -5,7 +5,7 @@ const Applications = () => {
     <div>
       <div className="relative bg-slate-50 h-48 mb-4">
         <h1 className="py-6 my-auto text-center text-3xl font-semibold text-fuchsia-800 mb-4">
-          Job Details
+          Applied jobs
         </h1>
         <img
           className="w-28 h-48 md:w-1/3 absolute inset-y-0 left-0 "
